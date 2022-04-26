@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+
+void menu(){
+	cout<<"***************MENU***************"<<endl;
+	cout<<"      Select a valid option"<<endl;
+	cout<<"1.Check Blacnce"<<endl;
+	cout<<"2.Withdraw Money"<<endl;
+	cout<<"3.Deposit Money"<<endl;
+	cout<<"**********************************"<<endl;
+}
+
+		
+
+
+int main(){
+	// menu //balance //withdraw //deposit
+		int balance=5000;
+		menu();
+	shubham:
+	
+	
+	int option;
+
+	int ammount_deposited;
+	int withdrawl_ammount;
+	cout<<"Select your option = ";
+	
+	
+	cin>>option;
+	switch(option){
+		case 1:cout<<"Your balance is = "<<balance<<endl;
+		break;
+		case 3:cout<<"Enter ammount you want to  deposit = "<<endl;
+		cin>>ammount_deposited;
+		balance = balance + ammount_deposited;
+		break;
+		case 2:cout<<"Enter ammount you want to witdraw = "<<endl;
+		cin>>withdrawl_ammount;
+		balance= balance - withdrawl_ammount;
+		break; 
+	}
+	try{
+		if(option>3){
+			throw "error";
+		}
+	}
+	catch(char const *msg){
+		cout<<"Invalid option entered"<<endl;
+	}
+	
+	goto shubham;
+	return 0;
+		
+}
